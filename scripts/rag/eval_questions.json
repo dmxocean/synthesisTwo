@@ -1,0 +1,581 @@
+[
+  {
+    "question": "find the boletín con referencias a radiodifusión e intervención",
+    "expected_record_ids": [
+      "rec_1939_035_p002",
+      "rec_1939_045_p002",
+      "rec_1939_076_p005",
+      "rec_1939_080_p002",
+      "rec_1941_019_p004",
+      "rec_1941_047_p004",
+      "rec_1943_040_p001",
+      "rec_1944_041_p002",
+      "rec_1944_078_p004",
+      "rec_1945_079_p006"
+    ]
+  },
+  {
+    "question": "find the comunicado político para emisión controlada",
+    "expected_record_ids": [
+      "rec_1936_005_p004",
+      "rec_1936_042_p003",
+      "rec_1936_051_p004",
+      "rec_1936_071_p002",
+      "rec_1937_018_p005",
+      "rec_1938_031_p004"
+    ]
+  },
+  {
+    "question": "find the guion de actualidad local",
+    "expected_record_ids": [
+      "rec_1934_004_p001",
+      "rec_1943_024_p003",
+      "rec_1948_027_p004",
+      "rec_1949_059_p005",
+      "rec_1950_017_p006",
+      "rec_1951_009_p002",
+      "rec_1952_020_p004",
+      "rec_1953_048_p003"
+    ]
+  },
+  {
+    "question": "find the guion de continuidad con saludo oficial",
+    "expected_record_ids": [
+      "rec_1939_046_p006",
+      "rec_1941_072_p005",
+      "rec_1941_073_p002",
+      "rec_1942_050_p003",
+      "rec_1943_007_p003",
+      "rec_1943_026_p003",
+      "rec_1944_058_p005",
+      "rec_1945_043_p001"
+    ]
+  },
+  {
+    "question": "find the guion de entrevista local",
+    "expected_record_ids": [
+      "rec_1946_023_p004",
+      "rec_1948_030_p004",
+      "rec_1949_029_p006",
+      "rec_1949_069_p001",
+      "rec_1950_063_p003",
+      "rec_1952_025_p001",
+      "rec_1953_012_p004",
+      "rec_1953_033_p004"
+    ]
+  },
+  {
+    "question": "find the guion deportivo con resultados de fútbol",
+    "expected_record_ids": [
+      "rec_1934_032_p003",
+      "rec_1940_006_p003",
+      "rec_1943_016_p005",
+      "rec_1950_049_p001",
+      "rec_1952_066_p006",
+      "rec_1953_070_p005"
+    ]
+  },
+  {
+    "question": "find the guion infantil con canción y concurso",
+    "expected_record_ids": [
+      "rec_1947_015_p006"
+    ]
+  },
+  {
+    "question": "find the guion informativo sobre disturbios y situación política",
+    "expected_record_ids": [
+      "rec_1937_037_p003",
+      "rec_1938_053_p006"
+    ]
+  },
+  {
+    "question": "find the guion publicitario y música ligera",
+    "expected_record_ids": [
+      "rec_1946_055_p004",
+      "rec_1948_008_p003",
+      "rec_1950_034_p003",
+      "rec_1953_022_p003",
+      "rec_1953_068_p005"
+    ]
+  },
+  {
+    "question": "find the parte de guerra y anuncio de lectura restringida",
+    "expected_record_ids": [
+      "rec_1936_056_p002",
+      "rec_1936_077_p002",
+      "rec_1937_001_p005",
+      "rec_1937_039_p004",
+      "rec_1937_067_p003",
+      "rec_1938_003_p004",
+      "rec_1938_060_p004"
+    ]
+  },
+  {
+    "question": "find the programa cultural con referencias sociales",
+    "expected_record_ids": [
+      "rec_1934_014_p005",
+      "rec_1936_065_p006",
+      "rec_1938_028_p005",
+      "rec_1938_062_p005"
+    ]
+  },
+  {
+    "question": "find the programa femenino y consejos del hogar",
+    "expected_record_ids": [
+      "rec_1953_038_p004"
+    ]
+  },
+  {
+    "question": "find the programa musical con revisión previa",
+    "expected_record_ids": [
+      "rec_1936_010_p005",
+      "rec_1939_013_p006",
+      "rec_1939_057_p004",
+      "rec_1940_054_p001",
+      "rec_1941_002_p003",
+      "rec_1942_075_p005",
+      "rec_1943_021_p004",
+      "rec_1944_044_p002",
+      "rec_1946_052_p003",
+      "rec_1946_064_p006",
+      "rec_1950_074_p001"
+    ]
+  },
+  {
+    "question": "find the región con sello y texto de autorización",
+    "expected_record_ids": [
+      "rec_1942_036_p003",
+      "rec_1943_011_p004",
+      "rec_1944_061_p003"
+    ]
+  },
+  {
+    "question": "radio scripts marked with a censorship stamp",
+    "expected_record_ids": [
+      "rec_1934_014_p005",
+      "rec_1936_005_p004",
+      "rec_1936_042_p003",
+      "rec_1936_065_p006",
+      "rec_1936_071_p002",
+      "rec_1937_037_p003",
+      "rec_1937_067_p003",
+      "rec_1938_028_p005",
+      "rec_1938_062_p005",
+      "rec_1939_045_p002",
+      "rec_1940_054_p001",
+      "rec_1941_019_p004",
+      "rec_1941_072_p005",
+      "rec_1941_073_p002",
+      "rec_1942_036_p003",
+      "rec_1943_021_p004",
+      "rec_1943_040_p001",
+      "rec_1944_041_p002",
+      "rec_1944_044_p002",
+      "rec_1944_078_p004",
+      "rec_1945_079_p006",
+      "rec_1946_023_p004",
+      "rec_1949_029_p006",
+      "rec_1950_049_p001",
+      "rec_1950_074_p001",
+      "rec_1952_020_p004",
+      "rec_1953_012_p004",
+      "rec_1953_070_p005"
+    ]
+  },
+  {
+    "question": "documents with crossed out or struck through text",
+    "expected_record_ids": [
+      "rec_1934_004_p001",
+      "rec_1936_005_p004",
+      "rec_1936_077_p002",
+      "rec_1937_001_p005",
+      "rec_1937_037_p003",
+      "rec_1937_039_p004",
+      "rec_1938_060_p004",
+      "rec_1939_013_p006",
+      "rec_1939_035_p002",
+      "rec_1939_045_p002",
+      "rec_1939_080_p002",
+      "rec_1940_006_p003",
+      "rec_1941_072_p005",
+      "rec_1942_036_p003",
+      "rec_1942_050_p003",
+      "rec_1942_075_p005",
+      "rec_1943_024_p003",
+      "rec_1944_044_p002",
+      "rec_1944_061_p003",
+      "rec_1945_079_p006",
+      "rec_1947_015_p006",
+      "rec_1948_030_p004",
+      "rec_1949_029_p006",
+      "rec_1950_034_p003",
+      "rec_1950_063_p003",
+      "rec_1952_025_p001",
+      "rec_1953_070_p005"
+    ]
+  },
+  {
+    "question": "pages with handwritten editorial notes in the margin",
+    "expected_record_ids": [
+      "rec_1937_001_p005",
+      "rec_1937_018_p005",
+      "rec_1938_003_p004",
+      "rec_1938_060_p004",
+      "rec_1939_046_p006",
+      "rec_1941_047_p004",
+      "rec_1943_011_p004",
+      "rec_1943_016_p005",
+      "rec_1944_041_p002",
+      "rec_1944_058_p005",
+      "rec_1945_043_p001",
+      "rec_1949_069_p001",
+      "rec_1950_017_p006",
+      "rec_1950_063_p003",
+      "rec_1950_074_p001",
+      "rec_1951_009_p002",
+      "rec_1952_020_p004",
+      "rec_1953_038_p004",
+      "rec_1953_048_p003"
+    ]
+  },
+  {
+    "question": "records with an administrative review stamp",
+    "expected_record_ids": [
+      "rec_1934_014_p005",
+      "rec_1936_010_p005",
+      "rec_1936_077_p002",
+      "rec_1937_018_p005",
+      "rec_1938_060_p004",
+      "rec_1938_062_p005",
+      "rec_1939_057_p004",
+      "rec_1939_076_p005",
+      "rec_1941_073_p002",
+      "rec_1942_036_p003",
+      "rec_1944_044_p002",
+      "rec_1946_064_p006",
+      "rec_1947_015_p006",
+      "rec_1948_027_p004",
+      "rec_1950_049_p001",
+      "rec_1953_012_p004",
+      "rec_1953_022_p003",
+      "rec_1953_038_p004"
+    ]
+  },
+  {
+    "question": "pages with a later archival processing stamp",
+    "expected_record_ids": [
+      "rec_1934_004_p001",
+      "rec_1936_042_p003",
+      "rec_1936_051_p004",
+      "rec_1936_056_p002",
+      "rec_1936_065_p006",
+      "rec_1937_067_p003",
+      "rec_1938_003_p004",
+      "rec_1938_031_p004",
+      "rec_1938_053_p006",
+      "rec_1939_076_p005",
+      "rec_1939_080_p002",
+      "rec_1940_006_p003",
+      "rec_1940_054_p001",
+      "rec_1941_002_p003",
+      "rec_1941_047_p004",
+      "rec_1942_050_p003",
+      "rec_1942_075_p005",
+      "rec_1943_007_p003",
+      "rec_1943_016_p005",
+      "rec_1943_024_p003",
+      "rec_1943_040_p001",
+      "rec_1945_079_p006",
+      "rec_1949_069_p001",
+      "rec_1953_068_p005"
+    ]
+  },
+  {
+    "question": "scripts with a red circular official stamp",
+    "expected_record_ids": [
+      "rec_1939_046_p006",
+      "rec_1940_006_p003",
+      "rec_1941_002_p003",
+      "rec_1941_019_p004",
+      "rec_1941_072_p005",
+      "rec_1943_007_p003",
+      "rec_1943_016_p005",
+      "rec_1943_021_p004",
+      "rec_1943_024_p003",
+      "rec_1943_026_p003",
+      "rec_1944_058_p005",
+      "rec_1944_078_p004",
+      "rec_1945_079_p006",
+      "rec_1946_052_p003",
+      "rec_1948_027_p004",
+      "rec_1950_074_p001",
+      "rec_1953_033_p004"
+    ]
+  },
+  {
+    "question": "radio scripts from 1934",
+    "expected_record_ids": [
+      "rec_1934_004_p001",
+      "rec_1934_014_p005",
+      "rec_1934_032_p003"
+    ]
+  },
+  {
+    "question": "radio scripts from 1937",
+    "expected_record_ids": [
+      "rec_1937_001_p005",
+      "rec_1937_018_p005",
+      "rec_1937_037_p003",
+      "rec_1937_039_p004",
+      "rec_1937_067_p003"
+    ]
+  },
+  {
+    "question": "radio scripts from 1939",
+    "expected_record_ids": [
+      "rec_1939_013_p006",
+      "rec_1939_035_p002",
+      "rec_1939_045_p002",
+      "rec_1939_046_p006",
+      "rec_1939_057_p004",
+      "rec_1939_076_p005",
+      "rec_1939_080_p002"
+    ]
+  },
+  {
+    "question": "radio scripts from 1941",
+    "expected_record_ids": [
+      "rec_1941_002_p003",
+      "rec_1941_019_p004",
+      "rec_1941_047_p004",
+      "rec_1941_072_p005",
+      "rec_1941_073_p002"
+    ]
+  },
+  {
+    "question": "radio scripts from 1943",
+    "expected_record_ids": [
+      "rec_1943_007_p003",
+      "rec_1943_011_p004",
+      "rec_1943_016_p005",
+      "rec_1943_021_p004",
+      "rec_1943_024_p003",
+      "rec_1943_026_p003",
+      "rec_1943_040_p001"
+    ]
+  },
+  {
+    "question": "radio scripts from 1945",
+    "expected_record_ids": [
+      "rec_1945_043_p001",
+      "rec_1945_079_p006"
+    ]
+  },
+  {
+    "question": "radio scripts from 1947",
+    "expected_record_ids": [
+      "rec_1947_015_p006"
+    ]
+  },
+  {
+    "question": "radio scripts from 1949",
+    "expected_record_ids": [
+      "rec_1949_029_p006",
+      "rec_1949_059_p005",
+      "rec_1949_069_p001"
+    ]
+  },
+  {
+    "question": "radio scripts from 1951",
+    "expected_record_ids": [
+      "rec_1951_009_p002"
+    ]
+  },
+  {
+    "question": "radio scripts from 1953",
+    "expected_record_ids": [
+      "rec_1953_012_p004",
+      "rec_1953_022_p003",
+      "rec_1953_033_p004",
+      "rec_1953_038_p004",
+      "rec_1953_048_p003",
+      "rec_1953_068_p005",
+      "rec_1953_070_p005"
+    ]
+  },
+  {
+    "question": "scripts reporting football results and match scores",
+    "expected_record_ids": [
+      "rec_1934_032_p003",
+      "rec_1940_006_p003",
+      "rec_1943_016_p005",
+      "rec_1950_049_p001",
+      "rec_1952_066_p006",
+      "rec_1953_070_p005"
+    ]
+  },
+  {
+    "question": "music programmes with concerts and song selections",
+    "expected_record_ids": [
+      "rec_1936_010_p005",
+      "rec_1939_013_p006",
+      "rec_1939_057_p004",
+      "rec_1940_054_p001",
+      "rec_1941_002_p003",
+      "rec_1942_075_p005",
+      "rec_1943_021_p004",
+      "rec_1944_044_p002",
+      "rec_1946_052_p003",
+      "rec_1946_055_p004",
+      "rec_1946_064_p006",
+      "rec_1948_008_p003",
+      "rec_1950_034_p003",
+      "rec_1950_074_p001",
+      "rec_1953_022_p003",
+      "rec_1953_068_p005"
+    ]
+  },
+  {
+    "question": "war bulletins and parte de guerra from the civil war",
+    "expected_record_ids": [
+      "rec_1936_056_p002",
+      "rec_1936_077_p002",
+      "rec_1937_001_p005",
+      "rec_1937_039_p004",
+      "rec_1937_067_p003",
+      "rec_1938_003_p004",
+      "rec_1938_060_p004"
+    ]
+  },
+  {
+    "question": "notices authorizing a broadcast for emission",
+    "expected_record_ids": [
+      "rec_1942_036_p003",
+      "rec_1943_011_p004",
+      "rec_1944_061_p003"
+    ]
+  },
+  {
+    "question": "women's programmes with household advice",
+    "expected_record_ids": [
+      "rec_1953_038_p004"
+    ]
+  },
+  {
+    "question": "children's programmes with songs and contests",
+    "expected_record_ids": [
+      "rec_1947_015_p006"
+    ]
+  },
+  {
+    "question": "radio documents mentioning Barcelona",
+    "expected_record_ids": [
+      "rec_1937_001_p005",
+      "rec_1943_040_p001",
+      "rec_1944_078_p004",
+      "rec_1948_030_p004",
+      "rec_1950_034_p003"
+    ]
+  },
+  {
+    "question": "scripts referring to the Republic",
+    "expected_record_ids": [
+      "rec_1936_051_p004",
+      "rec_1936_077_p002",
+      "rec_1937_037_p003",
+      "rec_1937_039_p004",
+      "rec_1937_067_p003",
+      "rec_1938_060_p004"
+    ]
+  },
+  {
+    "question": "records flagged as uncertain needing human review",
+    "expected_record_ids": [
+      "rec_1934_004_p001",
+      "rec_1936_005_p004",
+      "rec_1936_051_p004",
+      "rec_1936_065_p006",
+      "rec_1936_071_p002",
+      "rec_1936_077_p002",
+      "rec_1937_001_p005",
+      "rec_1937_037_p003",
+      "rec_1938_053_p006",
+      "rec_1938_060_p004",
+      "rec_1939_013_p006",
+      "rec_1939_080_p002",
+      "rec_1941_072_p005",
+      "rec_1942_036_p003",
+      "rec_1942_050_p003",
+      "rec_1942_075_p005",
+      "rec_1944_061_p003",
+      "rec_1945_043_p001",
+      "rec_1946_064_p006",
+      "rec_1947_015_p006",
+      "rec_1948_027_p004",
+      "rec_1948_030_p004",
+      "rec_1949_069_p001",
+      "rec_1950_063_p003",
+      "rec_1952_025_p001",
+      "rec_1953_012_p004",
+      "rec_1953_038_p004",
+      "rec_1953_048_p003",
+      "rec_1953_068_p005"
+    ]
+  },
+  {
+    "question": "high confidence verified radio scripts",
+    "expected_record_ids": [
+      "rec_1934_014_p005",
+      "rec_1934_032_p003",
+      "rec_1936_010_p005",
+      "rec_1936_042_p003",
+      "rec_1936_056_p002",
+      "rec_1937_018_p005",
+      "rec_1937_039_p004",
+      "rec_1937_067_p003",
+      "rec_1938_003_p004",
+      "rec_1938_028_p005",
+      "rec_1938_031_p004",
+      "rec_1938_062_p005",
+      "rec_1939_035_p002",
+      "rec_1939_045_p002",
+      "rec_1939_046_p006",
+      "rec_1939_057_p004",
+      "rec_1939_076_p005",
+      "rec_1940_006_p003",
+      "rec_1940_054_p001",
+      "rec_1941_002_p003",
+      "rec_1941_019_p004",
+      "rec_1941_047_p004",
+      "rec_1941_073_p002",
+      "rec_1943_007_p003",
+      "rec_1943_011_p004",
+      "rec_1943_016_p005",
+      "rec_1943_021_p004",
+      "rec_1943_024_p003",
+      "rec_1943_026_p003",
+      "rec_1943_040_p001",
+      "rec_1944_041_p002",
+      "rec_1944_044_p002",
+      "rec_1944_058_p005",
+      "rec_1944_078_p004",
+      "rec_1945_079_p006",
+      "rec_1946_023_p004",
+      "rec_1946_052_p003",
+      "rec_1946_055_p004",
+      "rec_1948_008_p003",
+      "rec_1949_029_p006",
+      "rec_1949_059_p005",
+      "rec_1950_017_p006",
+      "rec_1950_034_p003",
+      "rec_1950_049_p001",
+      "rec_1950_074_p001",
+      "rec_1951_009_p002",
+      "rec_1952_020_p004",
+      "rec_1952_066_p006",
+      "rec_1953_022_p003",
+      "rec_1953_033_p004",
+      "rec_1953_070_p005"
+    ]
+  }
+]

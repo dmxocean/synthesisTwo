@@ -1,0 +1,89 @@
+# Synthesis - single unified conda environment
+#
+# One environment covers the full pipeline:
+#   GPU indexing   (segmentation, Qwen3-VL, noise ResNet)
+#   RAG serving    (llama-index, Qdrant, Ollama)
+#   App backend    (FastAPI, MongoDB)
+#   Synthetic data (hdbscan, umap, roboflow)
+#
+# Why one env: sentence-transformers>=5.2 maintains joint compatibility with
+# transformers v4 and v5; llama-index and qdrant-client have no pip conflicts with
+# torch/smp. The GPU vs CPU split is a HARDWARE question, not a dep question.
+#
+# VRAM note: Qwen3-VL-8B in bf16 needs ~16 GB. On a machine with less VRAM use the
+# 2B or 4B variant (Qwen/Qwen3-VL-2B-Instruct or Qwen/Qwen3-VL-4B-Instruct) or add flash-attn for memory savings.
+# Segmentation models (SegFormer/U-Net) and noise ResNet run comfortably on 8 GB.
+#
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate Synthesis
+#   pip install -e ".[segmentation,detection,synthetic,rag,serving]"
+#
+# External services (Docker / binaries - not pip):
+#   docker run -p 6333:6333 qdrant/qdrant       # vector store
+#   docker run -p 27017:27017 mongo             # catalog DB
+#   ollama pull mistral:7b-instruct             # answer LLM (~4 GB)
+#
+# Model weights (downloaded on first use from Hugging Face):
+#   Qwen3-VL-8B-Instruct  ~16 GB  (detection stage)
+#   BAAI/bge-m3            ~2 GB  (RAG embeddings, 1024-dim)
+
+name: Synthesis
+channels:
+  - conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - python=3.10.20
+  - pip=26.0.1
+  - pyyaml
+  - numpy
+  - opencv
+  - pillow
+  - pdf2image
+  - tqdm
+  - poppler                   # system dep for pdf2image
+  - beautifulsoup4=4.14.3
+  - requests=2.32.5
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - pip:
+    # ── Core ML (segmentation + detection) ─────────────────────────────────
+    # torch>=2.6: required by Qwen3-VL (official) + removes the old CVE workaround
+    - torch>=2.6
+    - torchvision
+    # transformers>=4.57: required for Qwen3VLForConditionalGeneration
+    # The Synthesis env currently has 5.5.4 which satisfies this constraint
+    - transformers>=4.57
+    # qwen-vl-utils>=0.0.14: adds Qwen3-VL support (image_patch_size=16)
+    # was 0.0.8 for Qwen2.5-VL
+    - qwen-vl-utils>=0.0.14
+    - accelerate>=1.0          # device_map="auto" for Qwen3-VL sharding
+    - timm>=0.9                # smp encoders + ResNet-18 noise classifier
+    - segmentation-models-pytorch>=0.4
+    - tensorboard
+    - pydantic>=2
+    # ── Synthetic data ──────────────────────────────────────────────────────
+    - albumentations>=2.0
+    - hdbscan
+    - umap-learn
+    - roboflow
+    # ── RAG (llama-index + Qdrant + BM25) ──────────────────────────────────
+    # sentence-transformers>=5.2 supports both transformers v4 and v5
+    - sentence-transformers>=5.2
+    - llama-index>=0.12.33
+    - llama-index-vector-stores-qdrant>=0.6
+    - llama-index-embeddings-huggingface>=0.5.3
+    - llama-index-llms-ollama>=0.5.4
+    # Pin qdrant-client: recent versions renamed search_batch -> search_batch_points;
+    # llama-index-vector-stores-qdrant>=0.6 handles this correctly
+    - qdrant-client>=1.14.2
+    - rank-bm25
+    # ── App serving ────────────────────────────────────────────────────────
+    - fastapi
+    - uvicorn[standard]
+    - sse-starlette
+    - pymongo>=4.6
+    # ── flash-attn: optional, install separately if CUDA build tools available ─
+    # pip install flash-attn  (do NOT add here; it requires --no-build-isolation)

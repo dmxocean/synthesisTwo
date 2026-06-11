@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthesis"
+version = "0.1.0"
+requires-python = ">=3.10,<3.13"
+# Core deps: light, no ML. Every heavy/conflicting stack lives in an optional
+# extra below so you can install only what a given machine needs.
+dependencies = [
+    "numpy>=1.26,<3.0",
+    "pillow",
+    "opencv-python>=4.10",
+    "pydantic>=2",
+    "pyyaml",
+    "matplotlib",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+scraping     = ["requests>=2.32", "beautifulsoup4>=4.12"]
+annotation   = ["roboflow"]
+
+synthetic    = ["albumentations>=2.0", "scikit-image", "scipy", "scikit-learn", "hdbscan", "umap-learn", "pymupdf>=1.24"]
+
+# torch>=2.6 is required by Qwen3-VL (official recommendation).
+# The old <2.7 cap was for the Mask2Former CVE workaround - Mask2Former is deleted.
+# transformers>=4.57 is required for Qwen3VLForConditionalGeneration.
+# qwen-vl-utils>=0.0.14 adds Qwen3-VL support (image_patch_size=16).
+segmentation = [
+    "torch>=2.6",
+    "torchvision",
+    "segmentation-models-pytorch>=0.4",
+    "timm>=0.9",
+    "transformers>=4.57",
+    "tensorboard",
+]
+detection    = [
+    "torch>=2.6",
+    "torchvision",
+    "transformers>=4.57",
+    "qwen-vl-utils>=0.0.14",
+    "accelerate>=1.0",
+    "timm>=0.9",
+    "pdf2image",
+]
+flash        = ["flash-attn"]
+
+# RAG: llama-index + Qdrant + BM25. sentence-transformers>=5.2 supports
+# both transformers v4 and v5 so the GPU and serving stacks can coexist in one
+# env. Pin llama-index-vector-stores-qdrant>=0.6 to avoid the search_batch
+# breaking change in recent qdrant-client.
+rag          = [
+    "llama-index>=0.12.33",
+    "llama-index-vector-stores-qdrant>=0.6",
+    "llama-index-embeddings-huggingface>=0.5.3",
+    "llama-index-llms-ollama>=0.5.4",
+    "qdrant-client>=1.14.2",
+    "sentence-transformers>=5.2",
+    "rank-bm25",
+]
+serving      = ["fastapi", "uvicorn[standard]", "sse-starlette", "pymongo>=4.6"]
+dev          = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["src*", "app*"]

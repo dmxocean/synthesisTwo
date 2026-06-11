@@ -1,0 +1,10 @@
+[
+  {
+    "question": "find pages mentioning Barcelona with uncertain annotations",
+    "expected_record_ids": ["rec_1937_001_p005"]
+  },
+  {
+    "question": "retrieve radio scripts with handwritten intervention",
+    "expected_record_ids": ["rec_1937_001_p005", "rec_1940_054_p001"]
+  }
+]
