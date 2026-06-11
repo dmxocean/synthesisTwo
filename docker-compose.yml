@@ -1,0 +1,51 @@
+services:
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: radar-qdrant
+    ports:
+      - "6333:6333"   # REST (used by codebase)
+      - "6334:6334"   # gRPC (available if we switch QdrantClient to prefer_grpc=True)
+    volumes:
+      - ./docker/qdrant:/qdrant/storage
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: radar-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./docker/ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  mongo:
+    image: mongo:latest
+    container_name: radar-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/mongo:/data/db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

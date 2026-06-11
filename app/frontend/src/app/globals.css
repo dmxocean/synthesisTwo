@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    @apply bg-ink text-paper antialiased font-sans;
+    /* very subtle porcelain and brass washes */
+    background-image:
+      radial-gradient(1200px 600px at 75% -5%, rgba(67, 92, 148, 0.03), transparent 60%),
+      radial-gradient(900px 500px at -5% 105%, rgba(183, 163, 138, 0.05), transparent 55%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-highlight;
+  }
+  ::selection {
+    background: rgba(139, 38, 53, 0.08);
+  }
+  /* slim, on-theme scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #D1D5DB transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 9px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #5C5C5C;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-card;
+  }
+  .chip {
+    @apply rounded-full border px-2.5 py-0.5 text-xs;
+  }
+  .toolbtn {
+    @apply rounded-lg px-3 py-1.5 text-xs font-medium transition-colors;
+  }
+}
+
+@keyframes dots-fade {
+  0%, 100% { opacity: 0.12; transform: scale(0.65); }
+  50%       { opacity: 1;    transform: scale(1); }
+}

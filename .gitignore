@@ -1,0 +1,49 @@
+# .env
+.env
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Distribution 
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Frontend
+app/frontend/.next/
+app/frontend/node_modules/
+
+# VS Code
+.vscode/
+
+# Output
+logs.txt
+*.log
+
+# Folders
+data/
+docs/
+tests/
+slides/
+information/
+notebooks/
+
+
+# Results
+outputs/
+results/
+
+# Compressed files
+*.tgz
+*.zip
+
+# Storage
+storage/
+
+# OS files
+.DS_Store
+Thumbs.db
