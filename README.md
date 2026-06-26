@@ -175,3 +175,10 @@ RADAR/
  environment.yml     Full conda environment spec (alternative to pyproject extras)
  pyproject.toml
 ```
+
+## Contributors
+Víctor Brao
+Gerzon Díaz
+David Piera
+Héctor Salguero
+David Sanllehi
